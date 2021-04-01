@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.9.1)
+  - IQKeyboardManagerSwift (6.5.6)
+  - ObjectMapper (4.2.0)
+  - ProgressHUD (13.5)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8)
+  - IQKeyboardManagerSwift
+  - ObjectMapper
+  - ProgressHUD
+  - SDWebImage (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - ProgressHUD
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  ProgressHUD: 028e3828c7b582022c34a74604fc6073f8628d99
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+
+PODFILE CHECKSUM: 63cbaa2054c6fa610a484332ba548d8e7543b8ec
+
+COCOAPODS: 1.10.1

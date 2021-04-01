@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeDiscoverCell" customModule="Swate" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="222" id="KGk-i7-Jjw" customClass="RecipeDiscoverCell" customModule="Swate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="196"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-Ug-UG9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="sis-eA-5Jv">
+                                <rect key="frame" x="29" y="0.0" width="262" height="168"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JII-RP-MQp">
+                                <rect key="frame" x="30.5" y="118" width="260.5" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South Indian Delight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbb-yC-u1h">
+                                        <rect key="frame" x="23" y="8" width="164.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No missing ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZS-0M-nlL">
+                                        <rect key="frame" x="23" y="31" width="125" height="15"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <color key="textColor" red="0.5450980392" green="0.89019607840000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-Jy-yZj">
+                                        <rect key="frame" x="229.5" y="7" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="9Ut-Jd-xAk"/>
+                                            <constraint firstAttribute="height" constant="22" id="LvZ-c3-UKL"/>
+                                        </constraints>
+                                        <state key="normal" image="star"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Zbb-yC-u1h" firstAttribute="top" secondItem="JII-RP-MQp" secondAttribute="top" constant="8" id="8O7-bD-lub"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aev-Jy-yZj" secondAttribute="trailing" constant="9" id="Gaa-As-7X8"/>
+                                    <constraint firstItem="Zbb-yC-u1h" firstAttribute="leading" secondItem="JII-RP-MQp" secondAttribute="leading" constant="23" id="PBt-bv-jIH"/>
+                                    <constraint firstItem="Aev-Jy-yZj" firstAttribute="top" secondItem="JII-RP-MQp" secondAttribute="top" constant="7" id="PfF-N0-V7o"/>
+                                    <constraint firstAttribute="height" constant="50" id="e09-Gs-XeV"/>
+                                    <constraint firstItem="Aev-Jy-yZj" firstAttribute="leading" secondItem="Zbb-yC-u1h" secondAttribute="trailing" constant="42" id="fhv-gw-QRQ"/>
+                                    <constraint firstItem="EZS-0M-nlL" firstAttribute="top" secondItem="Zbb-yC-u1h" secondAttribute="bottom" constant="1" id="v6t-h1-a1N"/>
+                                    <constraint firstItem="EZS-0M-nlL" firstAttribute="leading" secondItem="Zbb-yC-u1h" secondAttribute="leading" id="xDg-Hv-3VG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JII-RP-MQp" secondAttribute="bottom" constant="22" id="0SF-Fe-mTl"/>
+                            <constraint firstAttribute="bottom" secondItem="sis-eA-5Jv" secondAttribute="bottom" constant="22" id="PtJ-Ns-jO5"/>
+                            <constraint firstItem="JII-RP-MQp" firstAttribute="trailing" secondItem="sis-eA-5Jv" secondAttribute="trailing" id="VeO-nk-qNg"/>
+                            <constraint firstAttribute="trailing" secondItem="sis-eA-5Jv" secondAttribute="trailing" constant="29" id="Z2p-hv-frf"/>
+                            <constraint firstAttribute="height" constant="190" id="bvw-NF-RET"/>
+                            <constraint firstItem="sis-eA-5Jv" firstAttribute="top" secondItem="GH9-Ug-UG9" secondAttribute="top" id="st5-EL-IcG"/>
+                            <constraint firstItem="sis-eA-5Jv" firstAttribute="leading" secondItem="GH9-Ug-UG9" secondAttribute="leading" constant="29" id="y69-4z-gz8"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GH9-Ug-UG9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KHZ-Jl-JhI"/>
+                    <constraint firstAttribute="bottom" secondItem="GH9-Ug-UG9" secondAttribute="bottom" id="WPO-ox-K8O"/>
+                    <constraint firstItem="GH9-Ug-UG9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sVG-pI-Zkb"/>
+                    <constraint firstAttribute="trailing" secondItem="GH9-Ug-UG9" secondAttribute="trailing" id="xA4-ja-hxe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnStar" destination="Aev-Jy-yZj" id="rOs-Lj-y7v"/>
+                <outlet property="imgFood" destination="sis-eA-5Jv" id="fCQ-2z-sNs"/>
+                <outlet property="lblFoodTitle" destination="Zbb-yC-u1h" id="gen-Pq-CbH"/>
+                <outlet property="lblIngredients" destination="EZS-0M-nlL" id="HnZ-ZD-kUo"/>
+                <outlet property="vwFav" destination="JII-RP-MQp" id="bDZ-aQ-PFF"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="155.35714285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="food" width="1536" height="696"/>
+        <image name="star" width="22" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
