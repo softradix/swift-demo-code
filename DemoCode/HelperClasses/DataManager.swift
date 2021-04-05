@@ -37,7 +37,7 @@ class DataManager {
     
     var AuthToken:String{
         get{
-            return UserDefaults.standard.value(forKey: "AuthToken") as? String ?? "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3N3YXRlLnNvZnRyYWRpeHRlY2hub2xvZ2llcy5jb20vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2MTcyODM4OTEsIm5iZiI6MTYxNzI4Mzg5MSwianRpIjoiQUlnalRtTzh0bXE0VFZYbCIsInN1YiI6MTgwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bJQBvv4O0nIulOzu8YXFE_4I-5_UDFQdsAX9Agz7wdU"
+            return UserDefaults.standard.value(forKey: "AuthToken") as? String ?? ""
         }
         set{
             UserDefaults.standard.setValue(newValue, forKey: "AuthToken")

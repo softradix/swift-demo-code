@@ -111,10 +111,13 @@ struct RecipesDetailsViewModel {
 
 extension RecipeListVM {
     func userPressed( at indexPath: IndexPath ){
-        let recipeDetail = self.recipesList?[indexPath.row]
-       
-        self.selectedRecipe = RecipesDetailsViewModel.init(cookingTime: recipeDetail?.cooking_time ?? "", cuisine: recipeDetail?.cuisine ?? "", diet: recipeDetail?.diet ?? "", directions: recipeDetail?.directions ?? "", dish: recipeDetail?.dish ?? "", recipeId: recipeDetail?.receipe_id ?? 0, recipeImage: recipeDetail?.receipe_image ?? "", recipeName: recipeDetail?.receipe_name ?? "", ingrdeinets: (recipeDetail?.ingrdeinets!)! , isFavourite: recipeDetail?.is_favourite ?? false, userQuantity: recipeDetail?.user_quantity ?? "", currentServing: recipeDetail?.currentServing ?? 0, totalAvailablCount: recipeDetail?.totalAvailablCount ?? 0)
-     
-        
-    }
+        if recipesList != nil {
+            let recipeDetail = self.recipesList?[indexPath.row]
+           
+            self.selectedRecipe = RecipesDetailsViewModel.init(cookingTime: recipeDetail?.cooking_time ?? "", cuisine: recipeDetail?.cuisine ?? "", diet: recipeDetail?.diet ?? "", directions: recipeDetail?.directions ?? "", dish: recipeDetail?.dish ?? "", recipeId: recipeDetail?.receipe_id ?? 0, recipeImage: recipeDetail?.receipe_image ?? "", recipeName: recipeDetail?.receipe_name ?? "", ingrdeinets: (recipeDetail?.ingrdeinets!)! , isFavourite: recipeDetail?.is_favourite ?? false, userQuantity: recipeDetail?.user_quantity ?? "", currentServing: recipeDetail?.currentServing ?? 0, totalAvailablCount: recipeDetail?.totalAvailablCount ?? 0)
+         
+            
+        }
+        }
+      
 }

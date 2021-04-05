@@ -34,7 +34,7 @@ class ApiManager: NSObject {
         }) 
     }
     
-  /*  func loginUser(params : [String :Any]?,completionHandler:@escaping(_ responseData:LoginModel?)->()) {
+    func loginUser(params : [String :Any]?,completionHandler:@escaping(_ responseData:LoginModel?)->()) {
         
         WebServices.shared.multipartRequest(parameters: params, headers:[.accept] , fileName: "", images: nil, apiEndPoint: ApiConstants.login) { (response) in
             let data : NSDictionary = response as NSDictionary
@@ -82,7 +82,7 @@ class ApiManager: NSObject {
 
 
         }
-    }*/
+    }
     
     
 }

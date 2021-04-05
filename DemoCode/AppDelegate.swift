@@ -30,7 +30,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func goToHomeMenu(){
+                
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vw = storyboard.instantiateViewController(withIdentifier: VCIdentifier.recipesVC.rawValue)
 
+        let navi = UINavigationController.init(rootViewController: vw)
+        navi.navigationBar.isTranslucent = true
+        navi.navigationBar.barStyle = .default
+        navi.navigationBar.barTintColor = .white
+
+        
+    
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if #available(iOS 13.0, *) {
+           if let scene = UIApplication.shared.connectedScenes.first{
+                guard let windowScene = (scene as? UIWindowScene) else { return }
+                print(">>> windowScene: \(windowScene)")
+                self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+                self.window!.windowScene = windowScene //Make sure to do this
+                self.window!.rootViewController = navi
+                self.window!.makeKeyAndVisible()
+                appDelegate.window = self.window!
+            }else {
+                let windowScene = UIApplication.shared
+                                .connectedScenes
+                                .filter { $0.activationState == .foregroundActive }
+                                .first
+                if let windowScene = windowScene as? UIWindowScene {
+                     self.window = UIWindow(windowScene: windowScene)
+                    self.window?.rootViewController = navi
+                    self.window?.makeKeyAndVisible()
+                }
+            }
+        }else {
+               window?.rootViewController = navi
+               window?.makeKeyAndVisible()
+        }
+    }
 
 }
 

@@ -52,6 +52,12 @@
 		18607C062615F650000BC27A /* DirectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18607C002615F650000BC27A /* DirectionCell.xib */; };
 		18607C072615F650000BC27A /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18607C012615F650000BC27A /* IngredientCell.swift */; };
 		18607C082615F650000BC27A /* ReceipeDetailCellone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18607C022615F650000BC27A /* ReceipeDetailCellone.xib */; };
+		1872CA272616F1CC0036C073 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CA262616F1CC0036C073 /* SignupVC.swift */; };
+		1872CA2A2616F2060036C073 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CA292616F2060036C073 /* LoginVC.swift */; };
+		1872CA2D2616F2810036C073 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CA2C2616F2810036C073 /* LoginVM.swift */; };
+		1872CA302616F28B0036C073 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CA2F2616F28A0036C073 /* LoginModel.swift */; };
+		1872CA332616F2AA0036C073 /* SignupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CA322616F2AA0036C073 /* SignupVM.swift */; };
+		1872CA362616F2B10036C073 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1872CA352616F2B10036C073 /* UserDataModel.swift */; };
 		2379173939B82BD66D129B6A /* Pods_DemoCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A420D88688A0B0CE9327C9E /* Pods_DemoCode.framework */; };
 		9B09F5BF2614470C00354E26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B09F5BE2614470C00354E26 /* AppDelegate.swift */; };
 		9B09F5C12614470C00354E26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B09F5C02614470C00354E26 /* SceneDelegate.swift */; };
@@ -107,6 +113,12 @@
 		18607C002615F650000BC27A /* DirectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionCell.xib; sourceTree = "<group>"; };
 		18607C012615F650000BC27A /* IngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		18607C022615F650000BC27A /* ReceipeDetailCellone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceipeDetailCellone.xib; sourceTree = "<group>"; };
+		1872CA262616F1CC0036C073 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		1872CA292616F2060036C073 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1872CA2C2616F2810036C073 /* LoginVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		1872CA2F2616F28A0036C073 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1872CA322616F2AA0036C073 /* SignupVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVM.swift; sourceTree = "<group>"; };
+		1872CA352616F2B10036C073 /* UserDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		2AA0F91508A495B9E1C40E0D /* Pods-DemoCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoCode.debug.xcconfig"; path = "Target Support Files/Pods-DemoCode/Pods-DemoCode.debug.xcconfig"; sourceTree = "<group>"; };
 		3A420D88688A0B0CE9327C9E /* Pods_DemoCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B09F5BB2614470C00354E26 /* DemoCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +281,12 @@
 				9B09F5C22614470C00354E26 /* ViewController.swift */,
 				18607C112615FE0E000BC27A /* RecipeList */,
 				18607C122615FE19000BC27A /* RecipeDetail */,
+				1872CA262616F1CC0036C073 /* SignupVC.swift */,
+				1872CA352616F2B10036C073 /* UserDataModel.swift */,
+				1872CA2C2616F2810036C073 /* LoginVM.swift */,
+				1872CA2F2616F28A0036C073 /* LoginModel.swift */,
+				1872CA322616F2AA0036C073 /* SignupVM.swift */,
+				1872CA292616F2060036C073 /* LoginVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -494,6 +512,7 @@
 				18607B8B2615E323000BC27A /* BaseViewController.swift in Sources */,
 				9B09F5C32614470C00354E26 /* ViewController.swift in Sources */,
 				18607BD52615E81A000BC27A /* TextFieldExtension.swift in Sources */,
+				1872CA332616F2AA0036C073 /* SignupVM.swift in Sources */,
 				9B09F5BF2614470C00354E26 /* AppDelegate.swift in Sources */,
 				18607BF82615F50B000BC27A /* RecipeFilterCell.swift in Sources */,
 				18607BF62615F50B000BC27A /* DiscoverCollectionCell.swift in Sources */,
@@ -501,11 +520,15 @@
 				18607B5F2615E1E4000BC27A /* RecipeListVC.swift in Sources */,
 				18607BDF2615E81A000BC27A /* AppColor.swift in Sources */,
 				18607BD12615E81A000BC27A /* TextViewExtension.swift in Sources */,
+				1872CA362616F2B10036C073 /* UserDataModel.swift in Sources */,
+				1872CA272616F1CC0036C073 /* SignupVC.swift in Sources */,
+				1872CA2A2616F2060036C073 /* LoginVC.swift in Sources */,
 				18607BED2615E960000BC27A /* Units.swift in Sources */,
 				18607B7A2615E2EC000BC27A /* RequestParameters.swift in Sources */,
 				18607B8C2615E323000BC27A /* MessageBase.swift in Sources */,
 				18607B742615E2EC000BC27A /* Reachability.swift in Sources */,
 				18607B782615E2EC000BC27A /* ApiManager.swift in Sources */,
+				1872CA2D2616F2810036C073 /* LoginVM.swift in Sources */,
 				18607BD42615E81A000BC27A /* String.swift in Sources */,
 				18607C032615F650000BC27A /* DirectionCell.swift in Sources */,
 				18607C072615F650000BC27A /* IngredientCell.swift in Sources */,
@@ -514,6 +537,7 @@
 				18607B622615E211000BC27A /* RecipeListVM.swift in Sources */,
 				18607B922615E38A000BC27A /* Recipes.swift in Sources */,
 				18607BD02615E81A000BC27A /* VGExtensions.swift in Sources */,
+				1872CA302616F28B0036C073 /* LoginModel.swift in Sources */,
 				18607BD22615E81A000BC27A /* ViewExtension.swift in Sources */,
 				18607B752615E2EC000BC27A /* KeyChainFile.swift in Sources */,
 				18607C052615F650000BC27A /* ReceipeDetailCellone.swift in Sources */,

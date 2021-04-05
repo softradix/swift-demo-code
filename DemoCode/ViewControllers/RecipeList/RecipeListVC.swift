@@ -51,7 +51,29 @@ class RecipeListVC: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+         super.viewDidAppear(true)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        self.viewDidLayoutSubviews()
+
+     }
+    
+    // MARK: - UI Initialisation
+
+    fileprivate func setNavigationItems(){
+        let imageSearch = UIImage(named: "search")
+        let searcgbarButtons = UIBarButtonItem.init(image: imageSearch, style: .plain, target: self, action: #selector(searchActionTapped))
+        navigationItem.leftBarButtonItem = searcgbarButtons
+        btnSaved.setTitleColor( AppColors.lightTextColor, for: .normal)
+        btnDiscover.setTitleColor(UIColor.black, for: .normal)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+
+
+    }
     fileprivate func setUpUI(){
+        self.setNavigationItems()
         self.tableRecipes.register(UINib(nibName: "RecipeDiscoverCell", bundle: nil), forCellReuseIdentifier: "RecipeDiscoverCell")
 
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -60,6 +82,7 @@ class RecipeListVC: BaseViewController {
         tableRecipes.addSubview(refreshControl)
 
     }
+  
     // MARK: - Init View Model
     func initVM() {
         
@@ -107,7 +130,44 @@ class RecipeListVC: BaseViewController {
             self.getRecipesData(showLoader: true)
         }
     }
-
+    @objc func searchActionTapped(){
+        
+    }
+    
+    // MARK: - Actions
+    @IBAction func discoverAction(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions(), animations: { () -> Void in
+            self.btnSaved.setTitleColor( AppColors.lightTextColor, for: .normal)
+            self.btnDiscover.setTitleColor(UIColor.black, for: .normal)
+            self.leadingSpace.constant = 5
+            self.view.layoutIfNeeded()
+            self.fromSaved = false
+            self.collectionHeightConstaint.constant = 48
+            self.viewModel.recipesList?.removeAll()
+            self.viewModel.favRecipesList?.removeAll()
+            self.getRecipesData(showLoader: true)
+        }, completion: { (finished: Bool) -> Void in
+            
+            
+        })
+    }
+    
+    @IBAction func savedAction(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions(), animations: { () -> Void in
+            self.btnDiscover.setTitleColor(AppColors.lightTextColor, for: .normal)
+            self.btnSaved.setTitleColor(UIColor.black, for: .normal)
+            self.leadingSpace.constant = self.btnSaved.frame.origin.x
+            self.view.layoutIfNeeded()
+            self.fromSaved = true
+            self.collectionHeightConstaint.constant = 0
+            self.viewModel.recipesList?.removeAll()
+            self.viewModel.favRecipesList?.removeAll()
+        }, completion: { (finished: Bool) -> Void in
+            
+        })
+    }
     
     // MARK: -  API methods
     fileprivate func getRecipesData( showLoader : Bool){
@@ -165,11 +225,14 @@ extension RecipeListVC :  UITableViewDelegate, UITableViewDataSource{
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.viewModel.userPressed(at: indexPath)
 
-    let vc = NavigationHelper.shared.viewController(VCIdentifier.recipeDetail, .main) as! ReceipeDetailVC
-       
-    vc.recipeData = self.viewModel.selectedRecipe
-    self.navigationController?.pushViewController(vc, animated: true)
+    if let selected = self.viewModel.selectedRecipe {
+        let vc = NavigationHelper.shared.viewController(VCIdentifier.recipeDetail, .main) as! ReceipeDetailVC
+           
+        vc.recipeData = selected
+        self.navigationController?.pushViewController(vc, animated: true)
 
+    }
+    
 
       
   }
